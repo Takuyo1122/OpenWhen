@@ -1,0 +1,106 @@
+/* ベース設定 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c3ecf7 0%, #eaf6f6 100%);
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #222;
+}
+
+/* 入力フォーム */
+input[type="text"],
+input[type="password"],
+input[type="datetime-local"],
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 2px solid #a7d8de;
+  background-color: #f0fcff;
+  font-size: 1.1rem;
+  box-shadow: inset 2px 2px 5px rgba(255,255,255,0.8);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+  border-color: #3bb4c1;
+  box-shadow: 0 0 8px #3bb4c1;
+  outline: none;
+}
+
+/* ラベルとラジオボタン */
+label {
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="radio"] {
+  margin-right: 0.3rem;
+  accent-color: #3bb4c1;
+}
+
+/* ボタン */
+button {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background: #3bb4c1;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(59,180,193,0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #279aa8;
+  box-shadow: 0 12px 20px rgba(39,154,168,0.6);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 10px rgba(39,154,168,0.5);
+}
+
+/* 手紙表示 */
+.letter {
+  background: white;
+  padding: 1.3rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #15575c;
+  margin-bottom: 1.8rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* URL表示ボックス */
+.url-box {
+  background: #d7f1f3;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #135a56;
+  margin-top: 1rem;
+  word-break: break-word;
+  user-select: all;
+  box-shadow: inset 2px 2px 8px rgba(255,255,255,0.8);
+}
+
+/* 非表示クラス */
+.hidden {
+  display: none;
+}
