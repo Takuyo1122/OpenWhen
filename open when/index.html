@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open When - 手紙作成＆閲覧アプリ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD2NX58THhQAWUY94rJ0xuuceyTFgwLMv4",
+    authDomain: "open-when-6dab6.firebaseapp.com",
+    projectId: "open-when-6dab6",
+    storageBucket: "open-when-6dab6.firebasestorage.app",
+    messagingSenderId: "804090797809",
+    appId: "1:804090797809:web:5d4bdc4c1d58ecebef1350",
+    measurementId: "G-FL08C98JCM"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</head>
+<body>
+
+<h1>Open When - 手紙作成＆閲覧</h1>
+
+<!-- 作成フォーム -->
+<div id="create-section">
+  <form id="form">
+    <input type="text" id="title" placeholder="タイトル" required />
+    <textarea id="message" placeholder="本文" rows="5" required></textarea>
+
+    <label><input type="radio" name="unlockType" value="date" checked /> 日時で開ける</label>
+    <label><input type="radio" name="unlockType" value="pass" /> パスワードで開ける</label>
+
+    <input type="datetime-local" id="unlockDate" />
+    <input type="password" id="unlockPass" placeholder="パスワード" class="hidden" />
+
+    <button type="submit">手紙を保存してURLを取得</button>
+  </form>
+
+  <div id="url-display" class="url-box hidden"></div>
+</div>
+
+<!-- 閲覧セクション -->
+<div id="view-section" class="hidden">
+  <div id="letter-display" class="letter"></div>
+  <button id="btn-open">開ける</button>
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
