@@ -107,13 +107,6 @@ if (letterId) {
       alert("URLのコピーに失敗しました。手動でコピーしてください。");
     }
 
-    // URL表示のテキスト選択（任意）
-    const range = document.createRange();
-    range.selectNodeContents(urlDisplay);
-    const sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-
     form.reset();
     updateUnlockInputs();
   };
